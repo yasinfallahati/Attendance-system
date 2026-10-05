@@ -1,71 +1,51 @@
-<div align="center">
+<p align="center"><img src="assets/hero.png" alt="Attendance System" width="100%"></p>
 
-<img src="./assets/banner.svg" alt="Attendance System" width="100%" />
+# Attendance System · yasin Face ID
 
-</div>
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white">
+<img src="https://img.shields.io/badge/LBPH-Face-22D3EE?style=for-the-badge">
+<img src="https://img.shields.io/badge/Excel%2FCSV-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white">
+<img src="https://img.shields.io/badge/Tkinter-0A192F?style=for-the-badge">
+</p>
 
-# Attendance System
+<p align="center"><strong>Identity desk for small teams</strong> — register faces, scan to clock in, export sheets.</p>
 
-Smart face-recognition attendance desktop app with admin panel and Excel/CSV export.
+## Security-minded overview
 
----
+| Layer | Behavior |
+|-------|----------|
+| Capture | Webcam via OpenCV Haar cascade |
+| Model | `LBPHFaceRecognizer` trained on Desktop `Attendance_Data` |
+| Logs | `attendance_db.csv` (+ active logs folder) |
+| Admin | Password-gated panel for reviews / export |
 
-## English
+UI theme: navy / cyan (“YASIN FALLAHATI” header). Persian labels throughout.
 
-
-
-### Features
-
-- Register users via webcam (Persian & English names)
-- Live face scan and automatic check-in timestamps
-- CSV attendance log + text logs
-- Password-protected admin panel for reports
-- Built with Python, OpenCV, and a desktop GUI
-
-### Stack
-
-Python · OpenCV · Face recognition · CSV/Excel export
-
-### Getting started
+### Run
 
 ```bash
-git clone https://github.com/yasinfallahati/Attendance-system.git
-cd Attendance-system
-pip install opencv-python face_recognition pillow  # as required by your env
-python "Attendance system.py"
+pip install opencv-python opencv-contrib-python pandas numpy pillow
+python3 "Attendance system.py"
 ```
+
+> Paths assume Windows `USERPROFILE` Desktop folders in the current script — adjust if you deploy on Linux.
 
 ---
 
-## فارسی
+## فارسی — سیستم حضور و غیاب چهره
 
-### سیستم حضور و غیاب
+نسخهٔ دسکتاپ **تشخیص چهره** برای ثبت ورود: ثبت‌نام کاربر جدید (نام فارسی/انگلیسی)، اسکن دوربین، آموزش مدل LBPH، و خروجی CSV/Excel. پنل مدیریت با رمز برای بازبینی لاگ‌ها.
 
-حضور و غیاب هوشمند با تشخیص چهره، پنل مدیریت و خروجی اکسل/CSV.
+### جریان کار
 
-
-
-### امکانات
-
-- ثبت کاربر با وبکم (نام فارسی و انگلیسی)
-- اسکن زنده چهره و ثبت خودکار ورود
-- لاگ CSV و فایل متنی
-- پنل مدیریت با رمز عبور
-- پایتون، OpenCV و رابط گرافیکی دسکتاپ
+1. **ثبت‌نام** — چند فریم چهره ذخیره می‌شود  
+2. **شروع اسکن** — تطبیق با مدل و ثبت ساعت/تاریخ  
+3. **مدیریت** — مشاهده و خروجی گرفتن از فایل‌ها  
 
 ### تکنولوژی‌ها
 
-Python · OpenCV · Face recognition · CSV/Excel export
+`OpenCV` · `opencv-contrib` (LBPH) · `Pandas` · `Pillow` · `Tkinter`
 
-### شروع کار
-
-```bash
-git clone https://github.com/yasinfallahati/Attendance-system.git
-cd Attendance-system
-pip install opencv-python face_recognition pillow
-python "Attendance system.py"
-```
-
----
-
-`#python` `#opencv` `#face-recognition` `#attendance` `#desktop` `#persian`
+مناسب آموزشگاه، دفتر کوچک، یا دموی هویت‌سنجی آفلاین — بدون ارسال تصویر به کلود.
