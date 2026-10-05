@@ -1,51 +1,181 @@
-<p align="center"><img src="assets/hero.png" alt="Attendance System" width="100%"></p>
+# 🎭 سیستم هوشمند حضور و غیاب با تشخیص چهره
 
-# Attendance System · yasin Face ID
-
-<p align="center">
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white">
-<img src="https://img.shields.io/badge/LBPH-Face-22D3EE?style=for-the-badge">
-<img src="https://img.shields.io/badge/Excel%2FCSV-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white">
-<img src="https://img.shields.io/badge/Tkinter-0A192F?style=for-the-badge">
-</p>
-
-<p align="center"><strong>Identity desk for small teams</strong> — register faces, scan to clock in, export sheets.</p>
-
-## Security-minded overview
-
-| Layer | Behavior |
-|-------|----------|
-| Capture | Webcam via OpenCV Haar cascade |
-| Model | `LBPHFaceRecognizer` trained on Desktop `Attendance_Data` |
-| Logs | `attendance_db.csv` (+ active logs folder) |
-| Admin | Password-gated panel for reviews / export |
-
-UI theme: navy / cyan (“YASIN FALLAHATI” header). Persian labels throughout.
-
-### Run
-
-```bash
-pip install opencv-python opencv-contrib-python pandas numpy pillow
-python3 "Attendance system.py"
-```
-
-> Paths assume Windows `USERPROFILE` Desktop folders in the current script — adjust if you deploy on Linux.
+یک سیستم هوشمند حضور و غیاب مبتنی بر **تشخیص چهره (Face Recognition)** که با استفاده از **Python** و **OpenCV** توسعه داده شده است. این برنامه امکان ثبت کاربران، تشخیص چهره، ثبت ورود، مدیریت گزارش‌ها و خروجی اکسل را در یک رابط کاربری گرافیکی مدرن فراهم می‌کند.
 
 ---
 
-## فارسی — سیستم حضور و غیاب چهره
+# ✨ امکانات
 
-نسخهٔ دسکتاپ **تشخیص چهره** برای ثبت ورود: ثبت‌نام کاربر جدید (نام فارسی/انگلیسی)، اسکن دوربین، آموزش مدل LBPH، و خروجی CSV/Excel. پنل مدیریت با رمز برای بازبینی لاگ‌ها.
+## 👤 ثبت کاربران
+- ثبت کاربر جدید با دوربین
+- پشتیبانی از نام فارسی و انگلیسی
+- ذخیره تصویر چهره
+- آموزش خودکار مدل پس از ثبت کاربران
 
-### جریان کار
+---
 
-1. **ثبت‌نام** — چند فریم چهره ذخیره می‌شود  
-2. **شروع اسکن** — تطبیق با مدل و ثبت ساعت/تاریخ  
-3. **مدیریت** — مشاهده و خروجی گرفتن از فایل‌ها  
+## 🎥 تشخیص چهره
+- اسکن زنده توسط وبکم
+- شناسایی کاربران ثبت‌شده
+- ثبت خودکار زمان ورود
+- نمایش پیام خوش‌آمدگویی پس از شناسایی
 
-### تکنولوژی‌ها
+---
 
-`OpenCV` · `opencv-contrib` (LBPH) · `Pandas` · `Pillow` · `Tkinter`
+## 📋 ثبت حضور و غیاب
+- ثبت نام کاربر
+- ثبت ساعت ورود
+- ثبت تاریخ
+- ذخیره اطلاعات در فایل CSV
+- ایجاد لاگ متنی برای هر ورود
 
-مناسب آموزشگاه، دفتر کوچک، یا دموی هویت‌سنجی آفلاین — بدون ارسال تصویر به کلود.
+---
+
+## 🛡️ پنل مدیریت
+- ورود با رمز عبور
+- مشاهده تمامی سوابق حضور و غیاب
+- بروزرسانی لیست گزارش‌ها
+- مدیریت اطلاعات ثبت‌شده
+
+---
+
+## 📊 خروجی اکسل
+- تولید فایل Excel
+- ذخیره خودکار روی Desktop
+- مناسب برای گزارش‌گیری و آرشیو
+
+---
+
+# 🎨 ویژگی‌های رابط کاربری
+
+- رابط کاربری مدرن با Tkinter
+- طراحی Dark Theme
+- دکمه‌های حرفه‌ای
+- نمایش وضعیت سیستم
+- پنل مدیریت اختصاصی
+
+---
+
+# 🛠️ تکنولوژی‌های استفاده شده
+
+- Python 3
+- OpenCV
+- Tkinter
+- Pandas
+- NumPy
+- Pillow
+- OpenPyXL
+
+---
+
+# 📂 ساختار پروژه
+
+```
+📁 Attendance-System
+│
+├── Attendance system.py
+├── attendance_db.csv
+├── Attendance_Data/
+│   ├── active/
+│   └── تصاویر کاربران
+└── README.md
+```
+
+---
+
+# 🚀 نصب
+
+ابتدا کتابخانه‌های موردنیاز را نصب کنید:
+
+```bash
+pip install opencv-contrib-python
+pip install numpy
+pip install pandas
+pip install pillow
+pip install openpyxl
+```
+
+---
+
+# ▶️ اجرای پروژه
+
+```bash
+python "Attendance system.py"
+```
+
+---
+
+# 📸 امکانات پروژه
+
+✅ ثبت کاربران جدید
+
+✅ تشخیص چهره با وبکم
+
+✅ ثبت حضور و غیاب
+
+✅ ذخیره اطلاعات در CSV
+
+✅ ذخیره گزارش متنی
+
+✅ خروجی Excel
+
+✅ پنل مدیریت
+
+✅ رابط کاربری گرافیکی
+
+---
+
+# 💡 ایده‌های توسعه
+
+- تشخیص چند چهره همزمان
+- ورود و خروج جداگانه
+- ثبت غیبت و تأخیر
+- اتصال به پایگاه داده (SQLite / MySQL)
+- سیستم چند کاربره
+- ثبت عکس هنگام ورود
+- ارسال پیامک یا ایمیل
+- داشبورد آماری
+- نمودار حضور و غیاب
+- گزارش ماهانه و سالانه
+- سیستم نقش‌های کاربری (Admin / User)
+- اتصال به دستگاه‌های حضور و غیاب
+
+---
+
+# 📦 کتابخانه‌های استفاده شده
+
+| کتابخانه | کاربرد |
+|----------|---------|
+| OpenCV | تشخیص و شناسایی چهره |
+| Tkinter | رابط کاربری |
+| Pandas | مدیریت داده‌ها |
+| NumPy | پردازش عددی |
+| Pillow | پردازش تصاویر |
+| OpenPyXL | تولید فایل Excel |
+
+---
+
+# 🤝 مشارکت
+
+اگر پیشنهادی برای بهبود پروژه دارید، خوشحال می‌شوم Pull Request ارسال کنید یا Issue جدید ثبت کنید.
+
+---
+
+# ⭐ حمایت
+
+اگر این پروژه برایتان مفید بود، لطفاً به آن یک **Star ⭐** بدهید.
+
+---
+
+## 👨‍💻 توسعه‌دهنده
+
+**Yasin Fallahati**
+
+GitHub:
+https://github.com/yasinfallahati
+
+---
+
+## 📄 License
+
+این پروژه تحت مجوز **MIT License** منتشر شده است و استفاده، ویرایش و توسعه آن آزاد است.
