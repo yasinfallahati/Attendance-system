@@ -1,181 +1,71 @@
-# 🎭 سیستم هوشمند حضور و غیاب با تشخیص چهره
+<div align="center">
 
-یک سیستم هوشمند حضور و غیاب مبتنی بر **تشخیص چهره (Face Recognition)** که با استفاده از **Python** و **OpenCV** توسعه داده شده است. این برنامه امکان ثبت کاربران، تشخیص چهره، ثبت ورود، مدیریت گزارش‌ها و خروجی اکسل را در یک رابط کاربری گرافیکی مدرن فراهم می‌کند.
+<img src="./assets/banner.svg" alt="Attendance System" width="100%" />
 
----
+</div>
 
-# ✨ امکانات
+# Attendance System
 
-## 👤 ثبت کاربران
-- ثبت کاربر جدید با دوربین
-- پشتیبانی از نام فارسی و انگلیسی
-- ذخیره تصویر چهره
-- آموزش خودکار مدل پس از ثبت کاربران
+Smart face-recognition attendance desktop app with admin panel and Excel/CSV export.
 
 ---
 
-## 🎥 تشخیص چهره
-- اسکن زنده توسط وبکم
-- شناسایی کاربران ثبت‌شده
-- ثبت خودکار زمان ورود
-- نمایش پیام خوش‌آمدگویی پس از شناسایی
+## English
 
----
 
-## 📋 ثبت حضور و غیاب
-- ثبت نام کاربر
-- ثبت ساعت ورود
-- ثبت تاریخ
-- ذخیره اطلاعات در فایل CSV
-- ایجاد لاگ متنی برای هر ورود
 
----
+### Features
 
-## 🛡️ پنل مدیریت
-- ورود با رمز عبور
-- مشاهده تمامی سوابق حضور و غیاب
-- بروزرسانی لیست گزارش‌ها
-- مدیریت اطلاعات ثبت‌شده
+- Register users via webcam (Persian & English names)
+- Live face scan and automatic check-in timestamps
+- CSV attendance log + text logs
+- Password-protected admin panel for reports
+- Built with Python, OpenCV, and a desktop GUI
 
----
+### Stack
 
-## 📊 خروجی اکسل
-- تولید فایل Excel
-- ذخیره خودکار روی Desktop
-- مناسب برای گزارش‌گیری و آرشیو
+Python · OpenCV · Face recognition · CSV/Excel export
 
----
-
-# 🎨 ویژگی‌های رابط کاربری
-
-- رابط کاربری مدرن با Tkinter
-- طراحی Dark Theme
-- دکمه‌های حرفه‌ای
-- نمایش وضعیت سیستم
-- پنل مدیریت اختصاصی
-
----
-
-# 🛠️ تکنولوژی‌های استفاده شده
-
-- Python 3
-- OpenCV
-- Tkinter
-- Pandas
-- NumPy
-- Pillow
-- OpenPyXL
-
----
-
-# 📂 ساختار پروژه
-
-```
-📁 Attendance-System
-│
-├── Attendance system.py
-├── attendance_db.csv
-├── Attendance_Data/
-│   ├── active/
-│   └── تصاویر کاربران
-└── README.md
-```
-
----
-
-# 🚀 نصب
-
-ابتدا کتابخانه‌های موردنیاز را نصب کنید:
+### Getting started
 
 ```bash
-pip install opencv-contrib-python
-pip install numpy
-pip install pandas
-pip install pillow
-pip install openpyxl
-```
-
----
-
-# ▶️ اجرای پروژه
-
-```bash
+git clone https://github.com/yasinfallahati/Attendance-system.git
+cd Attendance-system
+pip install opencv-python face_recognition pillow  # as required by your env
 python "Attendance system.py"
 ```
 
 ---
 
-# 📸 امکانات پروژه
+## فارسی
 
-✅ ثبت کاربران جدید
+### سیستم حضور و غیاب
 
-✅ تشخیص چهره با وبکم
+حضور و غیاب هوشمند با تشخیص چهره، پنل مدیریت و خروجی اکسل/CSV.
 
-✅ ثبت حضور و غیاب
 
-✅ ذخیره اطلاعات در CSV
 
-✅ ذخیره گزارش متنی
+### امکانات
 
-✅ خروجی Excel
+- ثبت کاربر با وبکم (نام فارسی و انگلیسی)
+- اسکن زنده چهره و ثبت خودکار ورود
+- لاگ CSV و فایل متنی
+- پنل مدیریت با رمز عبور
+- پایتون، OpenCV و رابط گرافیکی دسکتاپ
 
-✅ پنل مدیریت
+### تکنولوژی‌ها
 
-✅ رابط کاربری گرافیکی
+Python · OpenCV · Face recognition · CSV/Excel export
 
----
+### شروع کار
 
-# 💡 ایده‌های توسعه
-
-- تشخیص چند چهره همزمان
-- ورود و خروج جداگانه
-- ثبت غیبت و تأخیر
-- اتصال به پایگاه داده (SQLite / MySQL)
-- سیستم چند کاربره
-- ثبت عکس هنگام ورود
-- ارسال پیامک یا ایمیل
-- داشبورد آماری
-- نمودار حضور و غیاب
-- گزارش ماهانه و سالانه
-- سیستم نقش‌های کاربری (Admin / User)
-- اتصال به دستگاه‌های حضور و غیاب
+```bash
+git clone https://github.com/yasinfallahati/Attendance-system.git
+cd Attendance-system
+pip install opencv-python face_recognition pillow
+python "Attendance system.py"
+```
 
 ---
 
-# 📦 کتابخانه‌های استفاده شده
-
-| کتابخانه | کاربرد |
-|----------|---------|
-| OpenCV | تشخیص و شناسایی چهره |
-| Tkinter | رابط کاربری |
-| Pandas | مدیریت داده‌ها |
-| NumPy | پردازش عددی |
-| Pillow | پردازش تصاویر |
-| OpenPyXL | تولید فایل Excel |
-
----
-
-# 🤝 مشارکت
-
-اگر پیشنهادی برای بهبود پروژه دارید، خوشحال می‌شوم Pull Request ارسال کنید یا Issue جدید ثبت کنید.
-
----
-
-# ⭐ حمایت
-
-اگر این پروژه برایتان مفید بود، لطفاً به آن یک **Star ⭐** بدهید.
-
----
-
-## 👨‍💻 توسعه‌دهنده
-
-**Yasin Fallahati**
-
-GitHub:
-https://github.com/yasinfallahati
-
----
-
-## 📄 License
-
-این پروژه تحت مجوز **MIT License** منتشر شده است و استفاده، ویرایش و توسعه آن آزاد است.
+`#python` `#opencv` `#face-recognition` `#attendance` `#desktop` `#persian`
